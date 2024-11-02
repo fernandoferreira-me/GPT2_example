@@ -23,7 +23,7 @@ def format_response(response: dict) -> str:
 async def chat(body: ChatModel) -> ChatResponseModel:
     
     #device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    #device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     
     pipe = pipeline("text-generation",
                     model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
